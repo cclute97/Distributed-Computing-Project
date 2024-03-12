@@ -10,14 +10,14 @@ int main(int argc, char *argv[]) {
 
     unsigned short port; // Port Number
     int name_length; // length of client name 
-    int buffer[16]; // Buffer for sending/receiving data over stream -- current size chosen arbitrarily
+    char buffer[16]; // Buffer for sending/receiving data over stream -- current size chosen arbitrarily
     int server_socket; // socket descriptor
     int client_socket; // socket descriptor
     struct sockaddr_in server_info; // struct defined in socket.h for use with socket API functions 
     struct sockaddr_in client_info; 
 
     if (argc != 2) {
-        fprintf(stderr, "Error: requires 1 arg (port number)"); // stderr is the non-buffered output stream used for errors
+        fprintf(stderr, "Error: requires 1 arg -- port number"); // stderr is the non-buffered output stream used for errors
         exit(1);
     }
 
